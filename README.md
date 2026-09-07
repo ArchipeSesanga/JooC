@@ -1,1 +1,2 @@
 # jooC
+JooC is a weekly meal-planning and household-reminder app for people who like to plan their whole week in one sitting rather than day by day. It's built for solo home-cooks and small households who want a simple, visual way to decide what's for dinner and what needs to be bought before it becomes a last-minute scramble. In this app, a Board represents a single week, a Column represents a day of that week, and a Card represents either a meal planned for that day or a household item (like groceries or supplies) that needs to be picked up before the week is over.
