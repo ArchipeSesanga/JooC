@@ -21,7 +21,11 @@ An item is done if:
 
 Q3
 
+<<<<<<< HEAD
 The Sprint Backlog is most at risk of being skipped or faked in a solo, daily-cadence project. With no one to report to, it's tempting to just work off the full Product Backlog in whatever order feels natural that day instead of committing to a fixed, ready-checked slice. The real cost is losing the discipline the Sprint Backlog is meant to enforce. Without it, every day becomes its own mini-decision about what to build, scope creeps invisibly, and there's no clear boundary to measure whether I actually finished what I said I would.
 
 ## Follow up
 The role I expected to neglect (Scrum Master) hasn't changed. Writing the Definition of Ready did filter out one item I expected to include, "mark a day as no meal planned," because it wasn't specific enough to count as ready.
+=======
+The Sprint Backlog is most at risk of being skipped or faked in a solo, daily-cadence project. With no one to report to, it's tempting to just work off the full Product Backlog in whatever order feels natural that day instead of committing to a fixed, ready-checked slice. The real cost is losing the discipline the Sprint Backlog is meant to enforce. Without it, every day becomes its own mini-decision about what to build, scope creeps invisibly, and there's no clear boundary to measure whether I actually finished what I said I would.
+>>>>>>> docs/updates
