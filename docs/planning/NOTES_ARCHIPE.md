@@ -22,3 +22,30 @@ An item is done if:
 Q3
 
 The Sprint Backlog is most at risk of being skipped or faked in a solo, daily-cadence project. With no one to report to, it's tempting to just work off the full Product Backlog in whatever order feels natural that day instead of committing to a fixed, ready-checked slice. The real cost is losing the discipline the Sprint Backlog is meant to enforce. Without it, every day becomes its own mini-decision about what to build, scope creeps invisibly, and there's no clear boundary to measure whether I actually finished what I said I would.
+
+ASSIGMNENT 2.3
+==============
+
+Question 1: List as primary (day-to-day triage), Board for standups/status checks, Timeline just before sprint kickoff to sanity-check dependencies.
+
+## Assignment 2.3 — Submission Summary
+
+**Sample project (QuickNotes):** Built as a throwaway Asana project from the given backlog — 
+few items organized into sections, "sign up with email and password" broken into 3 subtasks 
+(validation, confirmation-email, error-handling) assigned to myself with due dates, 2 custom 
+fields (Priority, Type) populated across all tasks, one dependency set ("filter by tag" depends 
+on "tag a note"), and a `needs-design` tag applied to 3 tasks with a saved filter for 
+"needs-design + unassigned."
+
+**JooC project:** Full Product Backlog migrated from `product-backlog.md`, organized into 
+sections by epic — Weekly Planning, Shopping List, Reminders, Carry-Over & History, and Auth 
+(Auth left unresolved pending the v1 scope decision, per my Question flags). A distinct Sprint 1 
+section was added matching `sprint-1-backlog.md` exactly: all six Weekly Planning items plus 
+"view all items marked needed across the week" from Shopping List. Everything else — 
+Reminders, Carry-Over & History, and the remaining Shopping List items — stayed in their 
+backlog sections since none met my Definition of Ready yet (each depends on Weekly 
+Planning/Shopping List existing first).
+
+**Fields and structure:** Custom fields from Question 2 applied and populated on every task. 
+[One Sprint 1 item] broken into subtasks. One real dependency set within Sprint 1: 
+[e.g. "Add a Card to a day" depends on "Add a Column for each day"].
