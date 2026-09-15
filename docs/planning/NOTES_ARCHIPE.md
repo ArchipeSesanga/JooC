@@ -161,3 +161,75 @@ While setting up the real JooC folder, I almost made my colleague an Editor inst
 
 My Question 3 split mostly held up. Status updates and the Doc/Sheet content stayed async, exactly as planned, since there was nothing there that needed real-time back-and-forth. The one place it didn't fully hold was scope clarification — deciding the Auth epic's v1 scope (local-only vs. accounts) was something I'd planned to just note in the Doc async, but it turned out to need a quick synchronous check-in instead, since it's a decision that affects several other epics downstream and a written comment thread would have taken longer to converge than just talking it through.
 
+
+
+## Assignment 3.2
+=================
+
+### Question 1 — Beyond the core four
+
+My README already covers Purpose, Setup, Usage-adjacent content (Getting
+Started), and Contributing, plus extras like Tech Stack,
+Testing, and License. The section it's missing is **Known Limitations**.
+
+Right now a few important boundaries are only implied, not stated:
+
+- Auth is still an open scope decision (local-only vs. account-based
+  login) — nothing in the README says this, so someone cloning the repo
+  expecting login to work would have no way to know it isn't decided
+  yet, let alone built.
+- Testing is manual only, with no automated suite — a contributor could
+  reasonably assume CI or tests exist (most repos have some), push a
+  change, and have no safety net catch a regression.
+- The `.env` section says it's "not needed at this point," which quietly
+  implies it *will* be needed later, but doesn't say when, for what, or
+  what breaks if someone skips setting it up once it is needed.
+
+Leaving this section out wouldn't just be a documentation gap — it
+would actively mislead someone. A README that lists Tech Stack and
+Testing but says nothing about their limits reads as more finished
+than the project actually is. Someone building on top of JooC, or
+future-me returning to it in a few months, would have to discover
+these boundaries by hitting them (a broken login flow, an untested
+regression, a missing config file) instead of reading about them
+upfront — which is exactly the failure mode documentation exists to
+prevent.
+
+q2. needs actual code at the moment
+
+q3. ### Question 3 — What makes a decision ADR-worthy
+
+The decision I picked is using **MVVM with Provider** for state
+management, instead of Bloc, Riverpod, or no formal pattern at all.
+
+What makes this ADR-worthy, rather than a routine implementation
+detail, is that it meets three things a one-off choice usually
+doesn't:
+
+1. **Real alternatives existed, and each one was genuinely viable.**
+   Bloc and Riverpod aren't strawmen — they're both commonly used in
+   production Flutter apps, and either would have solved the same
+   problem differently. A decision only needs documenting when someone
+   could reasonably ask "why not X instead?" and deserve a real answer.
+
+2. **It shapes every feature built afterward, not just one screen.**
+   Once MVVM + Provider is chosen, every ViewModel, every Board/
+   Column/Card interaction, and every future feature inherits that
+   pattern. Reversing it later would mean touching most of the
+   codebase, not just one file — that blast radius is what separates
+   an architectural decision from a local one.
+
+3. **The trade-offs aren't obvious from reading the code alone.**
+   Someone looking at a ViewModel using Provider can see *what* it
+   does, but not *why* Provider was chosen over Riverpod's compile-time
+   safety, or what would trigger revisiting that choice (e.g. adding
+   contributors, or state complexity outgrowing Provider). That
+   reasoning only exists if it's written down.
+
+By contrast, something like choosing a `ListView` over a `Column` for
+rendering a day's cards is a routine detail — it has an obvious best
+answer given the data shape, doesn't lock in future work, and doesn't
+need a paragraph explaining trade-offs nobody would ask about. The
+line I'm using going forward: if reversing the decision later would
+require a rewrite rather than a tweak, or if a reasonable teammate
+would ask "why this and not the obvious alternative," it's ADR-worthy.
