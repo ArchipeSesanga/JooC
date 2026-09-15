@@ -50,3 +50,9 @@ Only manual testing is required at this point
 
 ## 📄 License
 * MIT
+
+ ## ⚠️ Known Limitations
+
+* **Auth is undecided** — v1 scope (local-only vs. account-based login) has not been finalized. Features that assume a logged-in user are not yet implemented.
+* **Manual testing only** — there is no automated test suite yet; changes should be manually verified against the flows in `lib/main_dev.dart` before merging.
+* **`.env` is currently unused** — configuration is hardcoded per flavor (dev/prod/beta). This will change once external services (e.g. push notifications, email) are added.
