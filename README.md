@@ -49,4 +49,4 @@ Only manual testing is required at this point
 * Clean Architecture
 
 ## 📄 License
-State the licensing terms of the project (e.g., MIT License, Apache 2.0).
+* MIT
