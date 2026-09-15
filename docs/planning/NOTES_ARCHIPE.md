@@ -129,3 +129,35 @@ Story checked: **"Add a card to a specific day"**
 
 The estimate that surprised me most was **"view needed items across the week."** As a raw backlog phrase it read as trivial — just "view needed items" — but writing the full story and acceptance criteria made clear it's actually the first feature that queries across every day on the board at once, not a single-day operation like the rest. That cross-cutting aggregation is what pushed it up to a 5 instead of feeling like a 2.
 
+## Assignment 3.1
+
+### Question 1 — Suggesting mode vs. comments vs. direct edits
+
+I'd use **comments** when I'm reviewing someone's work and just giving feedback — for example, flagging that a section of the JooC epics doc is unclear without touching the actual text.
+
+I'd use **suggesting mode** when I have a better solution in mind, or when we're still trying out different approaches and want the option to accept or reject the change — for example, proposing a reworded acceptance criterion on a JooC epic that a teammate could review before it becomes final.
+
+I'd **edit directly** when I have full ownership or explicit permission to contribute at that level — for example, updating my own JooC planning doc since I'm the sole owner of that content.
+
+### Question 2 — Permissions, deliberately
+
+- **Editor**: Me. At this stage I'm the only person actively working on JooC, so I'm the only one who needs full read/write access to the project's structure and content.
+- **Commenter**: A colleague/teammate. They should be able to review and give input on the project without being able to change the structure or content directly, since they're not currently a contributor.
+- **Viewer**: My instructor. She only needs to see the project's status and progress to give final feedback — she doesn't need to interact with or modify the structure itself.
+
+  ### Reflection
+
+  ## NOTES.md Updates
+
+### 1. What the "TidyUp" practice revealed
+
+Building the sample project first actually changed how I approached JooC's real folder. On TidyUp, I set every subfolder's permissions the same way by default and only realized afterward that "Resources" didn't need the same access level as "Working Docs." When I got to my real Daily App folder, I set permissions per-subfolder from the start instead of applying one blanket rule — which matched my Question 2 reasoning more closely than my first TidyUp attempt did. The practice run also made the mechanics (suggesting mode, comments, version history) feel routine, so I wasn't figuring those out for the first time while also trying to represent real project content.
+
+### 2. The permission I almost got wrong
+
+While setting up the real JooC folder, I almost made my colleague an Editor instead of a Commenter — it felt like the "helpful" default since they're someone I trust and collaborate with elsewhere. But going back to my Question 2 answer, the reason for Commenter access was specifically that they aren't an active contributor to JooC's structure right now, only a reviewer. Giving them Editor access would have let them restructure the project without that actually matching their current role, so I caught it and set it to Commenter as planned.
+
+### 3. Sync vs. async, in practice
+
+My Question 3 split mostly held up. Status updates and the Doc/Sheet content stayed async, exactly as planned, since there was nothing there that needed real-time back-and-forth. The one place it didn't fully hold was scope clarification — deciding the Auth epic's v1 scope (local-only vs. accounts) was something I'd planned to just note in the Doc async, but it turned out to need a quick synchronous check-in instead, since it's a decision that affects several other epics downstream and a written comment thread would have taken longer to converge than just talking it through.
+
