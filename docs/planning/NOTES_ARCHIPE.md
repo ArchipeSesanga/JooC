@@ -129,3 +129,19 @@ Story checked: **"Add a card to a specific day"**
 
 The estimate that surprised me most was **"view needed items across the week."** As a raw backlog phrase it read as trivial — just "view needed items" — but writing the full story and acceptance criteria made clear it's actually the first feature that queries across every day on the board at once, not a single-day operation like the rest. That cross-cutting aggregation is what pushed it up to a 5 instead of feeling like a 2.
 
+## Assignment 3.1
+
+### Question 1 — Suggesting mode vs. comments vs. direct edits
+
+I'd use **comments** when I'm reviewing someone's work and just giving feedback — for example, flagging that a section of the JooC epics doc is unclear without touching the actual text.
+
+I'd use **suggesting mode** when I have a better solution in mind, or when we're still trying out different approaches and want the option to accept or reject the change — for example, proposing a reworded acceptance criterion on a JooC epic that a teammate could review before it becomes final.
+
+I'd **edit directly** when I have full ownership or explicit permission to contribute at that level — for example, updating my own JooC planning doc since I'm the sole owner of that content.
+
+### Question 2 — Permissions, deliberately
+
+- **Editor**: Me. At this stage I'm the only person actively working on JooC, so I'm the only one who needs full read/write access to the project's structure and content.
+- **Commenter**: A colleague/teammate. They should be able to review and give input on the project without being able to change the structure or content directly, since they're not currently a contributor.
+- **Viewer**: My instructor. She only needs to see the project's status and progress to give final feedback — she doesn't need to interact with or modify the structure itself.
+
