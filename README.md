@@ -56,3 +56,24 @@ Only manual testing is required at this point
 * **Auth is undecided** — v1 scope (local-only vs. account-based login) has not been finalized. Features that assume a logged-in user are not yet implemented.
 * **Manual testing only** — there is no automated test suite yet; changes should be manually verified against the flows in `lib/main_dev.dart` before merging.
 * **`.env` is currently unused** — configuration is hardcoded per flavor (dev/prod/beta). This will change once external services (e.g. push notifications, email) are added.
+
+### ADR: Use MVVM with Provider for state management
+
+**Status:** Accepted
+
+**Context:** JooC needs a state management approach for Flutter that
+handles Board/Column/Card data flowing between the UI and Firebase,
+across three build flavors (dev/prod/beta). As a solo developer, the
+approach also needs to stay maintainable without a team to enforce
+conventions.
+
+**Decision:** Use the MVVM pattern with the Provider package for
+state management, rather than a more complex option (Bloc, Riverpod)
+or no formal pattern at all.
+
+**Consequences:** Views stay declarative and testable against
+ViewModels without touching Firebase directly. Provider has a
+smaller learning curve and less boilerplate than Bloc, which matters
+building solo. Trade-off: Provider scales less cleanly than Bloc/
+Riverpod if the app grows multiple collaborators or much deeper
+state trees later — that would be a reason to revisit this ADR.
